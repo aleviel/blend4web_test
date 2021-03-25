@@ -1,0 +1,22 @@
+.itemLabel {
+    padding-right: 10px;
+}
+
+.itemInput {
+    display: block;
+    max-width: 95%;
+    padding: 5px;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.inputWrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+}

@@ -1,0 +1,15 @@
+.field {
+    padding: 10px;
+    background: aqua;
+    min-width: 90%;
+    margin-bottom: 5px;
+}
+
+.field:last-child {
+    margin-bottom: 0;
+}
+
+.btnGroup {
+    display: flex;
+    justify-content: space-between;
+}
