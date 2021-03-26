@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react';
 
 import MainField from '../mainField';
-
 import {ItemsContext} from '../../context/itemsContext';
 
 import './App.css';
