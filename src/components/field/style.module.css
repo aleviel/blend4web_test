@@ -1,8 +1,8 @@
 .field {
     padding: 10px;
-    background: aqua;
+    background: #58c6c7;
     min-width: 90%;
-    margin-bottom: 5px;
+    margin: 5px 0;
 }
 
 .field:last-child {

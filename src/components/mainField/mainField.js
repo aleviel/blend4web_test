@@ -10,13 +10,13 @@ export default function MainField() {
     const Context = useContext(ItemsContext);
     return (
         <div id={Styles.field} className={Styles.field}>
-            <button onClick={Context.resetLocalStorage}>Reset Local Storage</button>
+            <button className={'main-field-btn'} onClick={Context.resetLocalStorage}>Reset Local Storage</button>
             {Context.allItems.map((elem, i) => {
                 return <Field key={Date.now() + Math.random()}
                               id={i}
                               item={elem}/>
             })}
-            <button onClick={Context.addNewItem}>
+            <button className={'main-field-btn'} onClick={Context.addNewItem}>
                 Add New Obj
             </button>
         </div>

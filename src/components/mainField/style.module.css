@@ -1,9 +1,12 @@
 .field {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     padding: 20px;
     width: 400px;
     min-height: 200px;
-    background: antiquewhite;
+    background: linear-gradient(45deg, #3f87a6, #ebf8e1, #f69d3c);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
