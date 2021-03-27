@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from 'react';
+import {useContext, useState} from 'react';
 
 import FieldItem from '../fieldItem/fieldItem';
 
@@ -12,7 +12,7 @@ export default function Field({id, item}) {
 
     const onAddClickBtn = () => {
         const name = `color${idColor}`;
-        setElem(prev => ({...prev, [name]: '#'}))
+        setElem(prev => ({...prev, [name]: '#000'}))
         setIdColor(prev => prev + 1)
     }
 

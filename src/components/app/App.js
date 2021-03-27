@@ -6,7 +6,7 @@ import {ItemsContext} from '../../context/itemsContext';
 import './App.css';
 
 function App() {
-    const template = {name: '#', type: '#', color: '#'}
+    const template = {name: '#', type: '#', color: '#000000'}
     const initData = [
         {name: 'name1', type: 'main', color: '#f4f4f4'},
         {name: 'name2', type: 'side', color: '#000000'},]

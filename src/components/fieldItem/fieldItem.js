@@ -1,9 +1,10 @@
 import {useContext, useState} from 'react';
 
+import {ChromePicker} from 'react-color';
+
 import {ItemsContext} from '../../context/itemsContext';
 
 import Styles from './style.module.css';
-import {SketchPicker} from 'react-color';
 
 export default function FieldItem({item, id}) {
     const label = item[0]
@@ -11,7 +12,6 @@ export default function FieldItem({item, id}) {
     const Context = useContext(ItemsContext)
     const [itemValue, setItemValue] = useState(value);
     const [isColorPicker, setIsColorPicker] = useState(false);
-    const [Color, setColor] = useState('white');
 
     const onChangeHandler = (event) => {
         setItemValue(event.target.value)
@@ -21,8 +21,8 @@ export default function FieldItem({item, id}) {
         setIsColorPicker(isColorPicker => !isColorPicker)
     }
 
-    function handleChange() {
-        console.log('change!')
+    function handleChange(color) {
+        setItemValue(color.hex)
     };
 
     function handleClose() {
@@ -31,7 +31,7 @@ export default function FieldItem({item, id}) {
 
     const ourPickerOrInput = label.match(/color/) ? <div onClick={showColorPicker}
                                                          className={Styles.swatchPicker}
-                                                         style={{background: Color}}/> :
+                                                         style={{background: itemValue}}/> :
         <input type='text' className={Styles.itemInput} id={label + id} value={itemValue}
                onInput={onChangeHandler}/>
 
@@ -43,7 +43,7 @@ export default function FieldItem({item, id}) {
                 {isColorPicker ?
                     (<div className={Styles.popover}>
                         <div className={Styles.cover} onClick={handleClose}/>
-                        <SketchPicker color={Color} onChange={handleChange}/>
+                        <ChromePicker color={itemValue} onChange={handleChange}/>
                     </div>)
                     : null}
                 {ourPickerOrInput}
